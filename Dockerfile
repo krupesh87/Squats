@@ -8,7 +8,8 @@ COPY ./requirements.txt /app/requirements.txt
 
 RUN apt-get update
 RUN apt-get update && apt-get install -y python3-opencv
-
+RUN pip3 install opencv-python-headless==4.5.3.56
+sudo yum install mesa-libGL -y
 RUN pip install opencv-python
 
 RUN apt-get install ffmpeg libsm6 libxext6  -y
